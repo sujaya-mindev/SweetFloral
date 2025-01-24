@@ -62,9 +62,9 @@ $result = $conn->query($query);
 
     <!-- Products Section -->
     <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <?php while ($row = $result->fetch_assoc()): ?>
+        <div class="row">
+            <?php while ($row = $result->fetch_assoc()): ?>
+                <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card h-100">
                         <img src="<?php echo $row['product_image']; ?>" class="card-img-top" alt="<?php echo $row['product_name']; ?>">
                         <div class="card-body">
@@ -72,8 +72,8 @@ $result = $conn->query($query);
                             <p class="card-text">Rs:<?php echo number_format($row['product_price'], 2); ?></p>
                         </div>
                     </div>
-                <?php endwhile; ?>
-            </div>
+                </div>
+            <?php endwhile; ?>
         </div>
     </div>
 
