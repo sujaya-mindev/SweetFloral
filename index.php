@@ -3,7 +3,7 @@
 include 'conn.php';
 
 // Fetch products from the database
-$query = "SELECT * FROM products LIMIT 12"; // Adjust the limit as needed
+$query = "SELECT * FROM product";
 $result = $conn->query($query);
 ?>
 
