@@ -2,7 +2,7 @@
     $host = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "dse241";
+    $dbname = "secretcore";
 
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
