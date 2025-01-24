@@ -15,19 +15,6 @@ $result = $conn->query($query);
     <title>Online Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-        }
-        .product-card img {
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
 </head>
 <body>
     <?php include 'navbar.html'; ?>
