@@ -1,41 +1,100 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family:  sans-serif;
+    line-height: 1.6;
+    background-color: #fffdf6;
     margin: 0;
     padding: 0;
-    background-color: #fec6c5;
-    display:  contents;
-    align-items: center;
-    height: 100vh;
-  }
-
-
-  h1 {
-    font-size: 2.5rem;
-    color: #fffdf6;
-    text-align: center;
-    margin-top: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    background-color: #fec6c5;
 }
 
-.container-fluid {
-    
-    padding: 20px; /* Add spacing inside the container */
-    margin-bottom: .6vw;
-    height: 20vw;
-    width: 95vw;
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffebf0;
+    padding: 40px 20px;
+    border-bottom: 2px solid #f5c2d3;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Carousel */
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 50px;
 }
 .carousel-item {
-    border-radius: 2vw;
-    cursor: pointer;
-    height: auto;
-    position: static;
-    height: 50vw;
-    width: 95vw;
+    width: 100%;
+    border-radius: 50px;
+    padding: 100px;
+    
+}
+/* Products Section */
+.container-fluid {
+    padding: 100px;
+    
 }
 
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
 
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+}
 
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+}
 
+.card-title {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+    
+}
+.card-text {
+    color: #777;
+    font-size: 1rem;
+}
 
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ff6b81;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

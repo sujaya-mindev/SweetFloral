@@ -1,0 +1,56 @@
+.body {
+    background-color: #e5faf5;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fffdf6;
+    
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+
+}
+.card-title {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Dark gray text */
+    margin-bottom: 15px; /* Add spacing below the title */
+}
+
+#myname {
+    font-size: 1.8rem; /* Slightly larger text */
+    font-weight: bold;
+    text-align: left; /* Center the text */
+    color: black; /* Bootstrap primary blue */
+    margin-top: 20px; /* Add spacing above */
+    margin-bottom: 10px;
+}
+.input-group input,
+.input-group textarea {
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Slightly rounded corners */
+    padding: 10px; /* Add space inside the input/textarea */
+    font-size: 1rem; /* Standard font size */
+    width: 100%; /* Make the input/textarea take full width */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.container {
+    width: 200%;
+    max-width: 1200px; /* Limit the maximum width */
+    margin: 10px auto; /* Center align horizontally */
+    padding:  25px; /* Add horizontal padding */
+    box-sizing: border-box; /* Include padding in width */
+}
+.btn-success {
+    width: 25%;
+    margin-top: 15px;
+    border-radius: 5px;
+}

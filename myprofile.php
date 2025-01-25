@@ -18,20 +18,9 @@ $result = $conn->query($query);
 <body>
     <?php include 'navbar.html'; ?>
 
-    <div>
-        <div class="container text-left">
-            <div class="row">
-                <div class="col-3" style="background-color:rgb(228, 228, 228);">
-                    <ul class="nav flex-column nav-underline" id="toggleButton">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">My Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Orders</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-9" id="myprofile">
+ 
+        
+                <div class="" id="myprofile">
                 <div class="card">
                     <div class="card-header">
                         <div id="myname">Sujaya Mindev</div>
