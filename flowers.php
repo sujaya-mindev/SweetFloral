@@ -14,6 +14,7 @@ $result = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     
@@ -22,9 +23,11 @@ $result = $conn->query($query);
     <?php include 'navbar.html'; ?>
 
     <!-- Hero Section -->
-    <div class="bg-primary text-white text-center py-5">
-        <h1>Welcome to Our Online Shop</h1>
-        <p>Discover amazing products at great prices!</p>
+    
+    <div class="">
+
+        <h1>Welcome to the Best Online Flower Delivery Service in Sri Lanka!</h1>
+        <p><center>Discover amazing products at great prices!<center></p>
     </div>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">

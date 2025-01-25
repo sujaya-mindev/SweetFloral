@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fec6c5;
+    display:  contents;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+  h1 {
+    font-size: 2.5rem;
+    color: #fffdf6;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    background-color: #fec6c5;
+}
+
+.container-fluid {
+    
+    padding: 20px; /* Add spacing inside the container */
+    margin-bottom: .6vw;
+    height: 20vw;
+    width: 95vw;
+}
+.carousel-item {
+    border-radius: 2vw;
+    cursor: pointer;
+    height: auto;
+    position: static;
+    height: 50vw;
+    width: 95vw;
+}
+
+
+
+
+
