@@ -1,0 +1,58 @@
+#carouselExampleAutoplaying {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.carousel-inner {
+    border-radius: 30px;
+}
+
+.col {
+    flex: 0 0 0;
+}
+
+#promo {
+    margin: 50px 1px 20px 1px;
+    border-radius: 20px;
+}
+
+#productCarousel {
+    margin: 0px 100px 0px 100px;
+}
+
+.card-img-top {
+    border-radius: 20px;
+}
+
+#col-lg-3 {
+    width: 16vw;
+}
+
+/* For Webkit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar thumb */
+    border-radius: 6px; /* Rounded corners */
+    transition: background 0.3s ease; /* Smooth transition */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Scrollbar thickness: auto, thin, or none */
+    scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+}
+
