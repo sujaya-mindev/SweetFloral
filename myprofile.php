@@ -18,24 +18,12 @@ $result = $conn->query($query);
 <body>
     <?php include 'navbar.html'; ?>
 
-    <div>
-        <div class="container text-left">
-            <div class="row">
-                <div class="col-3" style="background-color:rgb(228, 228, 228);">
-                    <ul class="nav flex-column nav-underline" id="toggleButton">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">My Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">My Orders</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-9" id="myprofile">
+    
+                <div class="" id="myprofile">
                 <div class="card">
                     <div class="card-header">
                         <div id="myname">Sujaya Mindev</div>
-                        <div id="myemail" style="display: inline-block; margin-right: 10px;">
+                        <div id="myemail" style="display: inline-block; margin-right: 15px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                             <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
                         </svg>

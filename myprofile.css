@@ -1,0 +1,15 @@
+body {
+    background-image: url("C:\xampp\htdocs\SecretCore\images\pexels-frostroomhead-9436715.jpg");
+  
+}
+.card-header {
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    gap: 15px;
+}
+
+h4{
+    font-size: 1.5rem;
+}
