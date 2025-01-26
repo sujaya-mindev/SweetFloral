@@ -1,5 +1,8 @@
+body {
+    padding: 0 100px;
+}
+
 #carouselExampleAutoplaying {
-  width: 90%;
   height: 100%;
   margin: 0 auto;
   padding: 0;
@@ -9,8 +12,8 @@
     border-radius: 30px;
 }
 
-.col {
-    flex: 0 0 0;
+.carousel-item {
+    text-align: center;
 }
 
 #promo {
@@ -18,17 +21,86 @@
     border-radius: 20px;
 }
 
-#productCarousel {
-    margin: 0px 100px 0px 100px;
+.row {
+    display: inline-flex;
+    justify-content: space-between;
 }
 
-.card-img-top {
+.card-img-overlay {
+    left: 50%;
+}
+
+
+#category-image {
+    padding: 0;
+    background-image: url("images/index/flowers-bg.png");
+    background-size: 100%;
+}
+
+#categories {
+    margin: 5vh 0;
+}
+
+#category-card {
+    width: 49%;
+    height: 30vh;
     border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    border: white;
+    padding: 0;
 }
 
-#col-lg-3 {
-    width: 16vw;
+#bestsellers {
+    padding-left: 4.5vw;
+    margin-top: 1vh;
 }
+
+#product-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 90%;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 .5vw;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+#product-card {
+    width: 20vw;
+}
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.product-card img {
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Ensure image fits within the card */
+}
+.d-flex.overflow-auto {
+    white-space: nowrap; /* Prevent wrapping of content */
+    padding-bottom: 10px; /* Add spacing for scroll indicators */
+}
+
+#product-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    text-wrap: auto;
+}
+
+#product-price {
+    font-size: 1rem;
+    text-wrap: auto;
+    background-color: white;
+    border: 0px solid #ffffff;
+    text-align: center;
+}
+
+
 
 /* For Webkit Browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
@@ -55,4 +127,3 @@ html {
     scrollbar-width: thin; /* Scrollbar thickness: auto, thin, or none */
     scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
 }
-
