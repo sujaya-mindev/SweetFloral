@@ -18,9 +18,9 @@ $result = $conn->query($query);
 <body>
     <?php include 'navbar.html'; ?>
 
- 
-        
-                <div class="" id="myprofile">
+
+
+               <div class="" id="myprofile">
                 <div class="card">
                     <div class="card-header">
                         <div id="myname">Sujaya Mindev</div>

@@ -1,6 +1,17 @@
-/* General Styles */
+.search-bar-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 10vh; /* Full height of the viewport */
+    padding: 10px; /* Optional padding */
+}
+
+.form-control {
+    width: 400px; /* Set the width of the search input */
+}
+
 body {
-    font-family:  sans-serif;
+    
     line-height: 1.6;
     background-color: #fffdf6;
     margin: 0;
@@ -35,12 +46,12 @@ p {
 .carousel-inner img {
     max-height: 500px;
     object-fit: contain;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 .carousel-item {
     width: 100%;
-    border-radius: 50px;
-    padding: 100px;
+    border-radius: 80px;
+    padding: 80px;
     
 }
 /* Products Section */
@@ -55,7 +66,12 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    margin: 0;
+    height: 20vw;
+    width: 20vw;
 }
+
+
 
 .card:hover {
     transform: scale(1.05);
@@ -72,6 +88,7 @@ p {
 
 .card-title {
     font-size: 1rem;
+    text-align: center;
     color: #333;
     margin: 10px 0;
     
@@ -97,4 +114,13 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin: 20px ;  /* Top and bottom margins */
+    padding: 10px;  /* Padding inside the paragraph */
+    width: 75%;            /* Set a width for the paragraph */
+    margin-left: auto;     /* Automatically adjust the left margin */
+    margin-right: auto;    /* Automatically adjust the right margin */
 }

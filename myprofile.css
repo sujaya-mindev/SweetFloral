@@ -1,27 +1,27 @@
-.body {
-    background-color: #e5faf5;
-}
+
 .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    margin: 50px auto;
-    width: 90%;
-    max-width: 1200px;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 800px;
     background-color: #fffdf6;
     
 }
 
 .card-header {
-    background-color: #f8f9fa;
+    background-color: #fffdf6;
     color: #333;
-    border-bottom: 2px solid #ddd;
+    border-bottom:  #ddd;
+    margin-top: 30px;
 
 }
 .card-title {
     font-size: 1.5rem; /* Larger font size */
     font-weight: bold; /* Bold font weight */
     color: #333; /* Dark gray text */
-    margin-bottom: 15px; /* Add spacing below the title */
+    margin-bottom: 25px; /* Add spacing below the title */
+    margin-top: 30px;
 }
 
 #myname {
@@ -29,25 +29,32 @@
     font-weight: bold;
     text-align: left; /* Center the text */
     color: black; /* Bootstrap primary blue */
-    margin-top: 20px; /* Add spacing above */
+    margin-top: 30px; /* Add spacing above */
     margin-bottom: 10px;
 }
+
 .input-group input,
 .input-group textarea {
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 5px; /* Slightly rounded corners */
-    padding: 10px; /* Add space inside the input/textarea */
-    font-size: 1rem; /* Standard font size */
-    width: 100%; /* Make the input/textarea take full width */
-    box-sizing: border-box; /* Include padding in width */
+  border: 1px solid #ccc; /* Add a border */
+  padding: 10px;          /* Add padding inside the input/textarea */
+  border-radius: 4px;     /* Add rounded corners */
+  width: 100%;            /* Make it take full width */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  margin-bottom: 10px;    /* Add spacing between inputs */
+}
+
+.input-group textarea {
+  resize: vertical;       /* Allow vertical resizing only */
+  height: 80px;          /* Set a default height */
+  overflow: auto;
 }
 
 .container {
     width: 200%;
-    max-width: 1200px; /* Limit the maximum width */
-    margin: 10px auto; /* Center align horizontally */
-    padding:  25px; /* Add horizontal padding */
-    box-sizing: border-box; /* Include padding in width */
+    max-width: 1200px;  /* Limit the maximum width */
+    margin: 10px auto;  /* Center align horizontally */
+    padding:  30px;     /* Add horizontal padding */
+    box-sizing: border-box;  /* Include padding in width */
 }
 .btn-success {
     width: 25%;

@@ -24,12 +24,12 @@ $result = $conn->query($query);
 
     <!-- Hero Section -->
     
-    <div class="">
-
-        <h1>Welcome to the Best Online Flower Delivery Service in Sri Lanka!</h1>
-        <p><center>Discover amazing products at great prices!<center></p>
-    </div>
-
+    <div class="search-bar-container">
+    <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search for anything..." aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -41,6 +41,8 @@ $result = $conn->query($query);
             <div class="carousel-item">
             <img src="images\flowers\banner\banner3.jpg" class="d-block w-100" alt="...">
             </div>
+           
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,6 +53,8 @@ $result = $conn->query($query);
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+    <p>Bring Joy to Any Event with Fresh Flowers! Our speciality at yeee.com is spreading happiness with our exquisite floral arrangements. Our fresh flowers are ideal for making every moment unique, whether it's a birthday, anniversary,or any other special occasion.</p>
+
 
     <!-- Products Section -->
     <div class="container-fluid">
