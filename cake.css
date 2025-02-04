@@ -1,0 +1,79 @@
+body {
+    line-height: 1.6;
+    background-color: #fffdf6;
+    margin: 0;
+    padding: 0;
+}  
+h5{
+
+  
+    text-align: center;
+    margin: 20px ;  /* Top and bottom margins */
+    padding: 10px;  /* Padding inside the paragraph */
+    width: 75%;            /* Set a width for the paragraph */
+    margin-left: auto;     /* Automatically adjust the left margin */
+    margin-right: auto;    /* Automatically adjust the right margin */
+   color: rgb(5, 44, 12);
+
+  
+}
+
+#carouselExampleAutoplaying{
+    margin-top:35px;
+    margin-bottom: 20px;
+}
+
+.carousel-inner{
+
+    width: 100%;
+    border-radius: 80px;
+    padding: 80px;
+    
+
+}
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+/* Products Section */
+.container-fluid {
+    padding: 100px;
+    
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin: 0;
+    height: 20vw;
+    width: 20vw;
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+}
+.card-title {
+    font-size: 10px;
+    text-align: center;
+    color: #333;
+    margin: 10px 0;
+    
+}
+.card-text {
+    color :rgb(252, 54, 54);
+    font-size: 14px;
+}
+
+
+

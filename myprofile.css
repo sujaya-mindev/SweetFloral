@@ -1,0 +1,34 @@
+body {
+    background-color: #e5faf5;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fffdf6;
+    
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+
+}
+.card-title {
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Dark gray text */
+    margin-bottom: 15px; /* Add spacing below the title */
+}
+
+#myname {
+    font-size: 1.8rem; /* Slightly larger text */
+    font-weight: bold;
+    text-align: left; /* Center the text */
+    color: black; /* Bootstrap primary blue */
+    margin-top: 20px; /* Add spacing above */
+    margin-bottom: 10px;
+}

@@ -3,7 +3,7 @@
 include 'conn.php';
 
 // Fetch products from the database
-$query = "SELECT * FROM product";
+$query = "SELECT * FROM product ORDER BY RAND() LIMIT 6";
 $result = $conn->query($query);
 ?>
 
@@ -18,26 +18,22 @@ $result = $conn->query($query);
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
     <?php include 'navbar.html'; ?>
 
     <!-- Carousel Section -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="images/index/banner/banner-1.avif" class="d-block w-100" alt="...">
+                <img src="images/index/banner/banner-1.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="images/index/banner/banner-2.avif" class="d-block w-100" alt="...">
+                <img src="images/index/banner/banner-2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="images/index/banner/banner-3.avif" class="d-block w-100" alt="...">
+                <img src="images/index/banner/banner-3.png" class="d-block w-100" alt="...">
             </div>
-            <div class="carousel-item">
-            <img src="images/index/banner/banner-4.avif" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-            <img src="images/index/banner/banner-5.avif" class="d-block w-100" alt="...">
-            </div>
+            
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,15 +47,15 @@ $result = $conn->query($query);
 
     <!-- Promotions -->
     <div class="container">
-        <div class="row">
+        <div class="row promo">
             <div class="col">
-                <img src="images/index/promo/promotion_section-1.avif" id="promo" class="img-fluid" alt="Promotion 1">
+                <img src="images/index/promo/promo-1.png" id="promo" class="img-fluid" alt="Promotion 1">
             </div>
             <div class="col">
-                <img src="images/index/promo/promotion_section-2.avif" id="promo" class="img-fluid" alt="Promotion 2">
+                <img src="images/index/promo/promo-2.png" id="promo" class="img-fluid" alt="Promotion 2">
             </div>
             <div class="col">
-                <img src="images/index/promo/promotion_section-3.avif" id="promo" class="img-fluid" alt="Promotion 3">
+                <img src="images/index/promo/promo-3.png" id="promo" class="img-fluid" alt="Promotion 3">
             </div>
         </div>
     </div>
@@ -67,27 +63,42 @@ $result = $conn->query($query);
     <!-- Categories -->
     <div class="container-fluid" id="categories">
         <div class="row">
-            <div class="card" id="category-card">
+            <div class="card" id="category-card" onclick="window.location.href='flowers.php'" style="cursor: pointer;">
                 <div class="row">
-                    <div class="col" id="category-image">
-                        <img src="images/index/flowers.png" class="img-fluid" alt="..." style="padding-left: 5px; width: 90%; margin: 10px;">
+                    <div class="col" id="category-image1">
+                        <img src="images/index/bg.png" class="img-fluid" alt="...">
                     </div>
-                    <div class="col" id="category-image">
-                        <img src="images/index/1.png" class="img-fluid" alt="...">
+                    <div class="col" id="category-image1">
+                        <img src="images/index/purple-bg.png" class="img-fluid" alt="...">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                            <h4 class="card-title cat">Flowers</h4>
+                            <p class="card-text">Brighten Any Occasion with Fresh Flowers! Whether it's a birthday, anniversary, or any other special occasion, our fresh flowers are perfect for making every moment memorable.</p>
+                            <h5 class="shop-now">Shop Now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </h5>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="card" id="category-card">
-                <img src="images/index/cakes.png" class="img-fluid" alt="...">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            <div class="card" id="category-card" onclick="window.location.href='cake.php'" style="cursor: pointer;">
+                <div class="row">
+                    <div class="col" id="category-image2">
+                        <img src="images/index/bg.png" class="img-fluid" alt="...">
+                    </div>
+                    <div class="col" id="category-image2">
+                        <img src="images/index/blue-bg.png" class="img-fluid" alt="...">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title cat">Cakes</h4>
+                            <p class="card-text">Best Fresh Online Cakes! We offer a delectable range of handcrafted cakes, perfect for celebrating birthdays, anniversaries, graduations, or any other occasion.</p>
+                            <h5 class="shop-now">Shop Now 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                </svg>
+                            </h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +106,7 @@ $result = $conn->query($query);
         
     
     
-    <!-- Featured Products 
+    <!-- Featured Products -->
     <div id="bestsellers">
         <h2>Best Sellers</h2>
     </div>
@@ -106,9 +117,9 @@ $result = $conn->query($query);
                 <div class="card product-card" id="product-card">
                     <img src="<?php echo $row['product_image']; ?>" class="img-fluid" alt="<?php echo $row['product_name']; ?>">
                     <div class="card-body text-center">
-                        <h5 class="card-title" id="product-title"><?php echo $row['product_name']; ?></h5>
+                        <h5 class="card-title product-title"><?php echo $row['product_name']; ?></h5>
                     </div>
-                    <div class="card-footer" id="product-price">
+                    <div class="card-footer product-price">
                         <small class="text-body-secondary">Rs: <?php echo number_format($row['product_price'], 2); ?></small>
                     </div>
                 </div>
@@ -116,7 +127,7 @@ $result = $conn->query($query);
         </div>
     </div>
     
-    -->
+    
 
     <?php include 'footer.html'; ?>
 

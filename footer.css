@@ -1,0 +1,49 @@
+.footer {
+  background-color: #343a40;
+  color: #dcdcdc;
+  padding: 40px 0;
+}
+
+.footer h5 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer a {
+  color: #dcdcdc;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer a:hover {
+  color: #ffcc00;
+  transform: translateX(5px);
+}
+
+.footer .icon {
+  font-size: 1.2rem;
+  margin-right: 8px;
+  vertical-align: middle;
+  color: #ffcc00;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer a:hover .icon {
+  transform: scale(1.2);
+}
+
+.footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer .hotline {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffcc00;
+}

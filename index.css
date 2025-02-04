@@ -1,9 +1,10 @@
 body {
-    padding: 0 100px;
+    padding: 0 5vw;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 #carouselExampleAutoplaying {
-  height: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -17,24 +18,104 @@ body {
 }
 
 #promo {
-    margin: 50px 1px 20px 1px;
+    margin: 20px 1px 20px 1px;
     border-radius: 20px;
+    width: 25vw;
+}
+
+.container {
+    margin: 6vh 0;
+    padding: 0;
+    max-width: 100%;
 }
 
 .row {
     display: inline-flex;
     justify-content: space-between;
+    padding-left: 0;
+    height: 35vh;
+}
+
+.promo {
+    width: 89.5vw;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    background-color: #fff8df;
+    margin-left: 0;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    padding: 1.3vw 0;
 }
 
 .card-img-overlay {
     left: 50%;
+    padding-top: 5%;
+    padding-left: 1.2vw;
 }
 
+.card-title {
+    font-size: 1vw;
+    text-wrap: auto;
+}
 
-#category-image {
+.cat {
+    font-size: 2vw;
+}
+
+.card-text {
+    font-size: 1vw;
+}
+
+#category-image1 {
     padding: 0;
-    background-image: url("images/index/flowers-bg.png");
-    background-size: 100%;
+    background-image: url("images/index/f1.png");
+    background-size: 140%;
+    transition: 0.4s ease-in-out;
+}
+
+#category-image2 {
+    padding: 0;
+    background-image: url("images/index/c1.png");
+    background-size: 140%;
+    transition: 0.4s ease-in-out;
+}
+
+#category-card:hover #category-image1 {
+    background-image: url("images/index/f2.png");
+}
+
+#category-card:hover #category-image2 {
+    background-image: url("images/index/c2.png");
+}
+
+#category-card:hover .shop-now::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.shop-now {
+    position: relative;
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 1.3vw;
+    font-weight: bold;
+}
+
+.shop-now::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
 }
 
 #categories {
@@ -43,7 +124,6 @@ body {
 
 #category-card {
     width: 49%;
-    height: 30vh;
     border-radius: 20px;
     overflow: hidden;
     transition: transform 0.2s ease-in-out;
@@ -51,17 +131,69 @@ body {
     padding: 0;
 }
 
+@media (max-width: 1000px) {
+    .card-title {
+        padding-top: 12%;
+        font-size: 2.5vw;
+    }
+    .card-text {
+        visibility: hidden;
+        font-size: 0%;
+    }
+    .shop-now {
+        font-size: 2vw;
+        margin-top: 10%;
+        font-weight: normal;
+    }
+}
+
+@media (max-width: 768px) {
+    #category-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .card-body {
+        padding: 0 0.5vw;
+    }
+
+    .card-title {
+        font-size: 1.6vw;
+        text-wrap: auto;
+    }
+
+    .card-text {
+        font-size: 0vw;
+    }
+
+    .shop-now {
+        font-size: 3vw;
+    }
+
+    .card-img-overlay {
+        padding-top: 10%;
+        padding-left: 3vw;
+    }
+
+    #product-title {
+        font-size: 0.8rem;
+    }
+
+    .product-price {
+        font-size: 0.2vw;
+    }
+}
+
+
 #bestsellers {
-    padding-left: 4.5vw;
     margin-top: 1vh;
 }
 
 #product-grid {
     display: grid;
     gap: 1rem;
-    padding: 1rem;
-    max-width: 90%;
+    padding: 0rem;
 }
+
 .product-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -77,12 +209,11 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 .product-card img {
-    height: 200px; /* Fixed height for images */
-    object-fit: cover; /* Ensure image fits within the card */
+    object-fit: cover; 
 }
 .d-flex.overflow-auto {
-    white-space: nowrap; /* Prevent wrapping of content */
-    padding-bottom: 10px; /* Add spacing for scroll indicators */
+    white-space: nowrap;
+    padding-bottom: 10px;
 }
 
 #product-title {
@@ -92,7 +223,7 @@ body {
     text-wrap: auto;
 }
 
-#product-price {
+.product-price {
     font-size: 1rem;
     text-wrap: auto;
     background-color: white;
@@ -126,4 +257,5 @@ body {
 html {
     scrollbar-width: thin; /* Scrollbar thickness: auto, thin, or none */
     scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
+    scroll-behavior: smooth;
 }

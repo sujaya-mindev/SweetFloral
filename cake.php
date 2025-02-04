@@ -14,29 +14,34 @@ $result = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="cake.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
 </head>
 <body>
     <?php include 'navbar.html'; ?>
 
     <!-- Hero Section -->
-    <div class="bg-primary text-white text-center py-5">
-        <h1>Welcome to Our Online Shop</h1>
-        <p>Discover amazing products at great prices!</p>
-    </div>
+    
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="images\flowers\banner\banner1.jpg" class="d-block w-100" alt="...">
+            <img src="images/banner-1696400116178.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="images\flowers\banner\banner2.jpg" class="d-block w-100" alt="...">
+            <img src="images/banner-1731379663075.avif" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="images\flowers\banner\banner3.jpg" class="d-block w-100" alt="...">
+            <img src="images\Pastel Pink and Brown Modern Sale Food Banner (2).png" class="d-block w-100" alt="...">
             </div>
         </div>
+        <h5>
+            Sri Lanka’s Best Fresh Online Cakes!, we offer a delectable range of handcrafted cakes,
+             perfect for celebrating birthdays, anniversaries, graduations, or any other occasion.
+             Experience the best online cake delivery service in Sri Lanka, bringing sweet moments right to your doorstep!
+</h5>
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
