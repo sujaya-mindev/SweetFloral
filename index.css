@@ -1,7 +1,10 @@
 body {
-    padding: 0 5vw;
     max-width: 100%;
     overflow-x: hidden;
+}
+
+nav {
+    background-color: #fefae0;
 }
 
 #carouselExampleAutoplaying {
@@ -231,6 +234,9 @@ body {
     text-align: center;
 }
 
+#productRow {
+    margin-bottom: 10vh;
+}
 
 
 /* For Webkit Browsers (Chrome, Edge, Safari) */

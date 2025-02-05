@@ -1,0 +1,14 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff, #fff8df);
+}
+input {
+    border-radius: 8px;
+}
+button {
+    font-weight: bold;
+    border-radius: 8px;
+}

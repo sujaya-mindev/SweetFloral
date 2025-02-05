@@ -1,13 +1,17 @@
 .footer {
-  background-color: #343a40;
+  background-color: #353535;
   color: #dcdcdc;
-  padding: 40px 0;
+  padding: 2vh 0 4.3vh 0;
+  width: 100vw;
+}
+
+.footer .container {
+  margin: 0vh 0;
 }
 
 .footer h5 {
   color: #ffffff;
   font-size: 1.3rem;
-  margin-bottom: 20px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -19,6 +23,7 @@
   text-decoration: none;
   transition: color 0.3s, transform 0.3s;
 }
+
 
 .footer a:hover {
   color: #ffcc00;
@@ -39,7 +44,18 @@
 
 .footer p {
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.5;
+}
+
+.footer .row {
+  display: flex;
+  height: fit-content;
+}
+
+.footer .col-md-4 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .footer .hotline {

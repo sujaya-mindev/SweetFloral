@@ -2,13 +2,12 @@
 .navbar {
     position: fixed;
     height: 10vh;
-    padding: 0 2vh;
+    padding: 0 5vh;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #343a40;
+    background-color: #353535;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
@@ -22,7 +21,7 @@
 }
 
 .nav-link {
-    color: #adb5bd;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 500;
     transition: color 0.3s ease;
@@ -61,6 +60,19 @@
     padding: 3px 6px;
 }
 
+button {
+    font-weight: bold;
+}
+
 body {
-    padding-top: 70px; /* Avoid overlapping with navbar */
+    padding-top: 70px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+@media (min-width: 1400px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 100vw;
+    }
 }

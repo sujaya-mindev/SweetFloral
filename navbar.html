@@ -1,31 +1,59 @@
 <link rel="stylesheet" href="navbar.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+<style>
+    #logo {
+        font-family: "Pacifico", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4vh;
+    }
+</style>
 
 <header class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">SecretCore</a>
+        <a class="navbar-brand" href="index.php" id="logo">SecretCore</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <!-- Cart Icon -->
-                <li class="nav-item cart-icon">
-                    <a class="nav-link" href="cart.php">
-                        <i class="bi bi-cart"></i> Cart
-                        <span class="badge">0</span>
-                    </a>
-                </li>
                 <!-- Account Icon -->
                 <li class="nav-item">
-                    <a class="nav-link" href="account.php">
-                        <i class="bi bi-person"></i> Account
-                    </a>
+                    <button type="button" class="btn" style="color: #353535; background-color: #f2e9e4; margin: 1vh 1vw 0 0; border-radius: 20px; padding: 0.6vh 1vw;">
+                        Login
+                    </button>
                 </li>
-                <!-- Login Button -->
-                <li class="nav-item">
-                    <a href="login.php" class="btn btn-custom">Login</a>
+                
+                <!-- Cart Icon -->
+                <li class="nav-item cart-icon">
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#f2e9e4" class="bi bi-cart3" viewBox="0 0 16 16" style="padding-right: 0.2vw;">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                        <span class="badge">0</span>
+                    </button>
                 </li>
             </ul>
         </div>
     </div>
 </header>
+
+<!-- Cart Offcanvas -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+        <h5 id="cartOffcanvasLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Your cart is currently empty.</p>
+        <button class="btn btn-warning w-100 mt-2" id="btn_checkout">Checkout</button>
+    </div>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+

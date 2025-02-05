@@ -3,7 +3,7 @@
 include 'conn.php';
 
 // Fetch products from the database
-$query = "SELECT * FROM product";
+$query = "SELECT * FROM product WHERE product_category='flowers'";
 $result = $conn->query($query);
 ?>
 
@@ -12,9 +12,9 @@ $result = $conn->query($query);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shop</title>
+    <title>Flowers</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="flowers.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     
@@ -22,14 +22,27 @@ $result = $conn->query($query);
 <body>
     <?php include 'navbar.html'; ?>
 
-    <!-- Hero Section -->
-    
-    <div class="search-bar-container">
-    <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search for anything..." aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-</div>
+    <div style="padding-top: 3vh;"></div>
+
+    <!-- Breadcrumb -->
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb p-3 rounded" style="background-color: #fffcf2; font-weight: bold;">
+            <li class="breadcrumb-item" style="padding: 0 0 0 2.5vw;">
+                <a href="index.php" class="text-decoration-none text-primary">
+                    <i class="fas fa-home"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16" style="vertical-align: bottom;">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                    </svg>
+                    Home
+                </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Flowers
+            </li>
+        </ol>
+    </nav>
+
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -53,7 +66,7 @@ $result = $conn->query($query);
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <p> Bring Joy to Any Event with Fresh Flowers! Our speciality at yeee.com is spreading happiness with our exquisite floral arrangements. Our fresh flowers are ideal for making every moment unique, whether it's a birthday, anniversary,or any other special occasion.</p>
+    <p> Bring Joy to Any Event with Fresh Flowers! Our speciality is spreading happiness with our exquisite floral arrangements. Our fresh flowers are ideal for making every moment unique, whether it's a birthday, anniversary,or any other special occasion.</p>
 
 
     <!-- Products Section -->
@@ -61,13 +74,15 @@ $result = $conn->query($query);
         <div class="row">
             <?php while ($row = $result->fetch_assoc()): ?>
                 <div class="col-md-4 col-lg-3 mb-4">
-                    <div class="card h-100">
-                        <img src="<?php echo $row['product_image']; ?>" class="card-img-top" alt="<?php echo $row['product_name']; ?>">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo $row['product_name']; ?></h5>
-                            <p class="card-text">Rs:<?php echo number_format($row['product_price'], 2); ?></p>
+                    <a href="viewproduct.php?product_code=<?php echo $row['product_code']; ?>" class="text-decoration-none text-dark">
+                        <div class="card h-100">
+                            <img src="<?php echo $row['product_image']; ?>" class="card-img-top" alt="<?php echo $row['product_name']; ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $row['product_name']; ?></h5>
+                                <p class="card-text">Rs:<?php echo number_format($row['product_price'], 2); ?></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             <?php endwhile; ?>
         </div>

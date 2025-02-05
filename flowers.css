@@ -52,8 +52,7 @@ p {
 .carousel-item {
     width: 100%;
     border-radius: 80px;
-    padding: 80px;
-    
+    padding: 40px 80px 40px 80px;
 }
 /* Products Section */
 .container-fluid {

@@ -1,0 +1,125 @@
+.search-bar-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 10vh; /* Full height of the viewport */
+    padding: 10px; /* Optional padding */
+}
+
+.form-control {
+    width: 400px; /* Set the width of the search input */
+}
+
+body {
+    
+    line-height: 1.6;
+    background-color: #fffdf6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+}
+
+p {
+    color: #555;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ffebf0;
+    padding: 40px 20px;
+    border-bottom: 2px solid #f5c2d3;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Carousel */
+.carousel-inner img {
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.carousel-item {
+    width: 100%;
+    border-radius: 80px;
+    padding: 40px 80px 40px 80px;
+}
+/* Products Section */
+.container-fluid {
+    padding: 100px;
+    
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin: 0;
+    height: 20vw;
+    width: 20vw;
+}
+
+
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1rem;
+    text-align: center;
+    color: #333;
+    margin: 10px 0;
+    
+}
+.card-text {
+    color: #FF0000;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #ff6b81;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+    margin: 20px ;  /* Top and bottom margins */
+    padding: 10px;  /* Padding inside the paragraph */
+    width: 75%;            /* Set a width for the paragraph */
+    margin-left: auto;     /* Automatically adjust the left margin */
+    margin-right: auto;    /* Automatically adjust the right margin */
+    font-style: italic;
+}
