@@ -50,7 +50,7 @@ for ($i = 0; isset($_GET['product_code' . $i]); $i++) {
                 </a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                <?php echo htmlspecialchars($product['product_name']); ?>
+                Checkout
             </li>
         </ol>
     </nav>

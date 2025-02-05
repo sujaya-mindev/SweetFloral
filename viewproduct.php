@@ -88,7 +88,15 @@ if (isset($_GET['product_code'])) {
                     document.getElementById('quantity').textContent.trim() // Ensure correct quantity
                 )">ADD TO CART</button>
 
-                <button class="btn-buy-now mt-2" onclick="window.location.href='checkout.php?product_code=<?php echo htmlspecialchars($product['product_code']); ?>&product_name=<?php echo htmlspecialchars($product['product_name']); ?>&product_price=<?php echo htmlspecialchars($product['product_price']); ?>&quantity=' + document.getElementById('quantity').textContent.trim()">BUY IT NOW</button>
+                <button class="btn-buy-now mt-2" onclick="redirectToCheckout(
+                    '<?php echo htmlspecialchars($product['product_code']); ?>',
+                    '<?php echo htmlspecialchars($product['product_name']); ?>',
+                    '<?php echo htmlspecialchars($product['product_price']); ?>',
+                    '<?php echo str_replace('\\', '/', $product['product_image']); ?>'
+                )">
+                    BUY IT NOW
+                </button>
+
 
                 <hr class="my-4">
 
@@ -121,5 +129,22 @@ if (isset($_GET['product_code'])) {
             }
         }
     </script>
+    <script>
+        function redirectToCheckout(productCode, productName, productPrice, productImage) {
+            let quantity = document.getElementById('quantity').textContent.trim();
+
+            // Ensure quantity is valid (fallback to 1 if empty)
+            if (!quantity || isNaN(quantity) || quantity <= 0) {
+                quantity = 1;
+            }
+
+            // Construct the URL
+            let checkoutUrl = `checkout.php?&product_code0=${encodeURIComponent(productCode)}&product_name0=${encodeURIComponent(productName)}&product_price0=${encodeURIComponent(productPrice)}&quantity0=${encodeURIComponent(quantity)}&product_image0=${encodeURIComponent(productImage)}`;
+
+            // Redirect to checkout page
+            window.location.href = checkoutUrl;
+        }
+    </script>
+
 </body>
 </html>

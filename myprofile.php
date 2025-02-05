@@ -191,7 +191,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         </div>
                         <div class="col-md-6">
                             <label for="dob" class="form-label">Birthday</label>
-                            <input type="date" class="form-control" id="dob" name="birthday" value="<?php echo htmlspecialchars($user['birthday']); ?>" required style="width: 10vw;">
+                            <input type="date" class="form-control" id="dob" name="birthday" style="width: 10vw;" value="<?php echo htmlspecialchars($user['birthday']); ?>" required>
                         </div>
                     </div>
                     <div class="">
