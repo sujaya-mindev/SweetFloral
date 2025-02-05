@@ -1,8 +1,8 @@
 <?php
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "secretcore";
+    $host = "sql108.infinityfree.com";
+    $username = "if0_38250293";
+    $password = "fplwYYGKCkgPFvK";
+    $dbname = "if0_38250293_secretcore";
 
     // Create connection
     $conn = new mysqli($host, $username, $password, $dbname);
