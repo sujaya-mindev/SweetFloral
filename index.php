@@ -19,14 +19,14 @@ $result = $conn->query($query);
 </head>
 <body>
 
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
     
     <div style="padding-top: 2.4vh;"></div>
 
     <!-- Breadcrumb -->
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb p-3 rounded" style="background-color: #fffcf2; font-weight: bold;">
-            <li class="breadcrumb-item" style="padding: 0 0 0 2.5vw;">
+            <li class="breadcrumb-item active" style="padding: 0 0 0 2.5vw;">
                 <a href="index.php" class="text-decoration-none text-primary">
                     <i class="fas fa-home"></i>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16" style="vertical-align: bottom;">

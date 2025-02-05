@@ -1,0 +1,16 @@
+.container {
+    max-width: 90vw;
+}
+
+.row {
+    margin: 5vh 0 0 0;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.table {
+    font-size: 14px;
+}

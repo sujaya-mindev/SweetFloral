@@ -1,34 +1,73 @@
 body {
-    background-color: #e5faf5;
-}
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    margin: 50px auto;
-    width: 90%;
-    max-width: 1200px;
-    background-color: #fffdf6;
-    
-}
-
-.card-header {
     background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 15px; 
+    box-shadow: 0 8px rgba(0, 0, 0, 0.1);
+}
+.card-header:first-child {
+    border-radius: 15px; 
+}
+.card-header {
+    background-color: #fffdf6;
     color: #333;
-    border-bottom: 2px solid #ddd;
-
-}
-.card-title {
-    font-size: 1.5rem; /* Larger font size */
-    font-weight: bold; /* Bold font weight */
-    color: #333; /* Dark gray text */
-    margin-bottom: 15px; /* Add spacing below the title */
+    border-bottom:  #ddd;
 }
 
+.card-header h3 {
+    margin: 0;
+}
+
+.card-body {
+    padding: 20px;
+    background-color: #fffdfa;
+    border-radius: 15px; 
+}
+.row.g-3 {
+    margin-top: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.btn-group img {
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.form-control {
+    border-radius: 8px;
+}
+.btn-success {
+    width: 20%;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h4 {
+    font-weight: bold;
+    margin-top: 10px;
+}
+i {
+    margin-bottom: 5px;
+    font-family: Arial;
+}
+.shadow-lg {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    font-family: Arial, Helvetica, sans-serif;
+}
 #myname {
     font-size: 1.8rem; /* Slightly larger text */
     font-weight: bold;
     text-align: left; /* Center the text */
     color: black; /* Bootstrap primary blue */
-    margin-top: 20px; /* Add spacing above */
-    margin-bottom: 10px;
 }

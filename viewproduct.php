@@ -35,7 +35,7 @@ if (isset($_GET['product_code'])) {
     <link rel="stylesheet" href="viewproduct.css">
 </head>
 <body>
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 
     <!-- Breadcrumb -->
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="my-4">
@@ -88,7 +88,7 @@ if (isset($_GET['product_code'])) {
                     document.getElementById('quantity').textContent.trim() // Ensure correct quantity
                 )">ADD TO CART</button>
 
-                <button class="btn-buy-now mt-2">BUY IT NOW</button>
+                <button class="btn-buy-now mt-2" onclick="window.location.href='checkout.php?product_code=<?php echo htmlspecialchars($product['product_code']); ?>&product_name=<?php echo htmlspecialchars($product['product_name']); ?>&product_price=<?php echo htmlspecialchars($product['product_price']); ?>&quantity=' + document.getElementById('quantity').textContent.trim()">BUY IT NOW</button>
 
                 <hr class="my-4">
 

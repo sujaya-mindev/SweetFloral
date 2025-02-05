@@ -20,7 +20,7 @@ $result = $conn->query($query);
     
 </head>
 <body>
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 
     <div style="padding-top: 2vh;"></div>
 

@@ -16,7 +16,7 @@ $result = $conn->query($query);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <?php include 'navbar.html'; ?>
+    <?php include 'navbar.php'; ?>
 
     <!-- Hero Section -->
     <div class="bg-primary text-white text-center py-5">

@@ -1,3 +1,6 @@
+<?php if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+} ?>
 <link rel="stylesheet" href="navbar.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +17,7 @@
 
 <header class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="index.php" id="logo">SecretCore</a>
+        <a class="navbar-brand" href="index.php" id="logo">Sweet Floral</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,11 +25,31 @@
             <ul class="navbar-nav ms-auto">
                 <!-- Account Icon -->
                 <li class="nav-item">
-                    <button type="button" class="btn" style="color: #353535; background-color: #f2e9e4; margin: 1vh 1vw 0 0; border-radius: 20px; padding: 0.6vh 1vw;">
-                        Login
-                    </button>
+                    <?php
+                    if (!isset($_SESSION['user_id'])) {
+                        echo '<a href="login.php">
+                                <button type="button" class="btn" style="color: #353535; background-color: #f2e9e4; margin: 1vh 1vw 0 0; border-radius: 20px; padding: 0.6vh 1vw;">
+                                    Login
+                                </button>
+                              </a>';
+                    } else {
+                        if ($_SESSION['user_type'] == "customer") {
+                            echo '<a href="myprofile.php">
+                                    <button type="button" class="btn" style="color: #353535; background-color: #f2e9e4; margin: 1vh 1vw 0 0; border-radius: 20px; padding: 0.6vh 1vw;">
+                                        My Profile
+                                    </button>
+                                  </a>';
+                        } elseif ($_SESSION['user_type'] == "admin") {
+                            echo '<a href="manage.php">
+                                    <button type="button" class="btn" style="color: #353535; background-color: #f2e9e4; margin: 1vh 1vw 0 0; border-radius: 20px; padding: 0.6vh 1vw;">
+                                        Manage
+                                    </button>
+                                  </a>';
+                        }
+                    }
+                    ?>
                 </li>
-                
+
                 <!-- Cart Icon -->
                 <li class="nav-item cart-icon">
                     <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas">
@@ -41,6 +64,7 @@
     </div>
 </header>
 
+<!-- Cart Offcanvas -->
 <div class="offcanvas offcanvas-end" id="cartOffcanvas">
     <div class="offcanvas-header">
         <h5><b>Shopping Cart</b></h5>
@@ -48,14 +72,12 @@
     </div>
     <div class="offcanvas-body">
         <ul id="cart-items" class="list-group"></ul>
-        <button class="btn w-100 mt-2" style="background-color: #8bc34a;">Checkout</button>
+        <button class="btn w-100 mt-2" style="background-color: #8bc34a;" onclick="proceedToCheckout()">Checkout</button>
         <button class="btn btn-danger w-100 mt-3" onclick="clearCart()">Clear Cart</button>
     </div>
 </div>
-
 
 <script src="cart.js"></script>
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-

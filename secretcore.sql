@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2025 at 06:20 AM
+-- Generation Time: Feb 05, 2025 at 07:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,47 @@ SET time_zone = "+00:00";
 --
 -- Database: `secretcore`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` varchar(50) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `phone` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`, `name`, `email`, `phone`) VALUES
+('admin123', 'admin', 'admin@test.com', '0711234567');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `customer`
+--
+
+CREATE TABLE `customer` (
+  `email` varchar(200) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `phone_no` varchar(12) NOT NULL,
+  `address` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `customer`
+--
+
+INSERT INTO `customer` (`email`, `first_name`, `last_name`, `phone_no`, `address`) VALUES
+('customer@gmail.com', 'Emily', 'Wilson', '0719876543', '34, 2nd Lane, Dehiwala, Sri Lanka');
 
 -- --------------------------------------------------------
 
@@ -49,15 +90,47 @@ INSERT INTO `product` (`product_code`, `product_name`, `product_description`, `p
 ('FLOWERLCOM465', 'BLOOMING KNOWLEDGE', 'A beautiful assortment of fresh blooms, thoughtfully arranged to create an elegant and eye-catching bouquet. Perfect for celebrating special moments or brightening up any space, this floral bunch is designed to spread joy and bring a smile to the recipient’s face.', 'images\\flowers\\FLOWERLCOM465.avif', 'flowers', 100, 1800),
 ('FLOWERLCOM91', 'DREAMING ABOUT YOU', 'This stunning flower bunch boasts a medley of delightful pinkish hues, a captivating blend of soft, pink tones. It\'s like a gentle embrace from nature, a reminder of life\'s simple and exquisite joys. This bouquet whispers beauty and radiates love, making it the perfect gift to brighten anyone\'s day.', 'images\\flowers\\FLOWERLCOM91.avif', 'flowers', 100, 4200);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(100) NOT NULL,
+  `password` varchar(200) NOT NULL,
+  `userType` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `userType`) VALUES
+('admin123', '$2y$10$EqLz/Ric48NIJBZlTcHz9u3J2YVj6aQVLPih8ANUeCUTxcl3gRNWi', 'admin'),
+('customer@gmail.com', '$2y$10$i58l5iCtKXMOBZnkIt3IZOoi1EsOcZKlHeiuXBU6tqVxxIN0jBLKS', 'customer');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`email`);
 
 --
 -- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`product_code`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
