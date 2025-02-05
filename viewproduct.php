@@ -80,7 +80,14 @@ if (isset($_GET['product_code'])) {
                 </div>
 
                 <!-- Add to Cart and Buy Now Buttons -->
-                <button class="btn-add-to-cart">ADD TO CART</button>
+                <button class="btn-add-to-cart" onclick="addToCart(
+                    '<?php echo $product['product_code']; ?>', 
+                    '<?php echo $product['product_name']; ?>', 
+                    '<?php echo $product['product_price']; ?>', 
+                    '<?php echo str_replace('\\', '/', $product['product_image']); ?>', 
+                    document.getElementById('quantity').textContent.trim() // Ensure correct quantity
+                )">ADD TO CART</button>
+
                 <button class="btn-buy-now mt-2">BUY IT NOW</button>
 
                 <hr class="my-4">
@@ -96,6 +103,7 @@ if (isset($_GET['product_code'])) {
 
     <?php include 'footer.html'; ?>
 
+    <script src="cart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script>
